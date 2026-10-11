@@ -1,0 +1,83 @@
+name: build-theme
+
+# 推送 main 就构建产物并**追加**提交到 dist 分支（主题商店 / 自定义 URL 读的就是它）。
+# 推 preview 走 dist-preview，用于上线前验收，不影响线上。
+
+on:
+  push:
+    branches: [main, preview]
+  workflow_dispatch:
+
+concurrency:
+  group: build-theme-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 类型检查
+        run: npm run typecheck
+
+      - name: 构建
+        env:
+          API_BASE: ${{ secrets.API_BASE }}
+        run: npm run build
+
+      - name: 取出源码 commit 说明
+        id: source
+        run: |
+          echo "message<<EOF" >> "$GITHUB_OUTPUT"
+          git log -1 --pretty=%s >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: 追加提交到产物分支
+        env:
+          TARGET: ${{ github.ref_name == 'preview' && 'dist-preview' || 'dist' }}
+          SOURCE_MESSAGE: ${{ steps.source.outputs.message }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 把产物放到一边，切到产物分支后再铺回来。
+          rm -rf /tmp/theme-dist
+          mkdir -p /tmp/theme-dist
+          cp -R dist/. /tmp/theme-dist/
+
+          if git ls-remote --exit-code --heads origin "$TARGET" >/dev/null 2>&1; then
+            git fetch origin "$TARGET"
+            git checkout -B "$TARGET" "origin/$TARGET"
+          else
+            # 首次：建一个孤立分支，不把源码历史带过去。
+            git checkout --orphan "$TARGET"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          # 清掉上一版产物，只保留 .git；模型文件内容不变时 git 会自动按 blob 去重，不会撑大仓库。
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -R /tmp/theme-dist/. .
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "产物无变化，跳过提交。"
+            exit 0
+          fi
+          git commit -m "$SOURCE_MESSAGE" -m "build: $SOURCE_SHA"
+          git push origin "HEAD:$TARGET"

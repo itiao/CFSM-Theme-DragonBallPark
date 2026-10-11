@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-preview
+.env
+.env.local
+*.local
+.DS_Store
+.vite
+*.log
+
+# 截图脚本的产物
+shots/
+
+# TS 增量编译缓存
+*.tsbuildinfo
