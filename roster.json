@@ -1,0 +1,799 @@
+{
+ "source": "https://github.com/fchapoulliep/dragondex3d",
+ "count": 82,
+ "families": [
+  {
+   "id": "goku",
+   "name": "孙悟空",
+   "forms": [
+    {
+     "id": "goku-base-form",
+     "name": "基础形态",
+     "dir": "Goku (Base Form)",
+     "file": "/models/goku-base-form.glb"
+    },
+    {
+     "id": "goku-super-saiyan",
+     "name": "超级赛亚人",
+     "dir": "Goku (Super Saiyan)",
+     "file": "/models/goku-super-saiyan.glb"
+    },
+    {
+     "id": "goku-super-saiyan-3",
+     "name": "超级赛亚人3",
+     "dir": "Goku (Super Saiyan 3)",
+     "file": "/models/goku-super-saiyan-3.glb"
+    },
+    {
+     "id": "goku-super-saiyan-blue",
+     "name": "超级赛亚人蓝",
+     "dir": "Goku (Super Saiyan Blue)",
+     "file": "/models/goku-super-saiyan-blue.glb"
+    },
+    {
+     "id": "goku-ultra-instinct",
+     "name": "自在极意功",
+     "dir": "Goku (Ultra Instinct)",
+     "file": "/models/goku-ultra-instinct.glb"
+    }
+   ]
+  },
+  {
+   "id": "goku-gt",
+   "name": "悟空（GT）",
+   "forms": [
+    {
+     "id": "goku-gt",
+     "name": "GT 悟空",
+     "dir": "Goku (GT)",
+     "file": "/models/goku-gt.glb"
+    },
+    {
+     "id": "goku-super-saiyan-4",
+     "name": "超级赛亚人4",
+     "dir": "Goku (Super Saiyan 4)",
+     "file": "/models/goku-super-saiyan-4.glb"
+    }
+   ]
+  },
+  {
+   "id": "goku-alt",
+   "name": "悟空（道服）",
+   "forms": [
+    {
+     "id": "goku-super-saiyan-1-torn-gi",
+     "name": "战损道服",
+     "dir": "Goku (Super Saiyan 1, Torn Gi)",
+     "file": "/models/goku-super-saiyan-1-torn-gi.glb"
+    },
+    {
+     "id": "goku-super-saiyan-blue-whis-gi",
+     "name": "威斯道服",
+     "dir": "Goku (Super Saiyan Blue, Whis Gi)",
+     "file": "/models/goku-super-saiyan-blue-whis-gi.glb"
+    }
+   ]
+  },
+  {
+   "id": "vegeta",
+   "name": "贝吉塔",
+   "forms": [
+    {
+     "id": "vegeta-base-form",
+     "name": "基础形态",
+     "dir": "Vegeta (Base Form)",
+     "file": "/models/vegeta-base-form.glb"
+    },
+    {
+     "id": "vegeta-super-saiyan",
+     "name": "超级赛亚人",
+     "dir": "Vegeta (Super Saiyan)",
+     "file": "/models/vegeta-super-saiyan.glb"
+    },
+    {
+     "id": "vegeta-majin",
+     "name": "魔化贝吉塔",
+     "dir": "Vegeta (Majin)",
+     "file": "/models/vegeta-majin.glb"
+    },
+    {
+     "id": "vegeta-super-saiyan-blue",
+     "name": "超级赛亚人蓝",
+     "dir": "Vegeta (Super Saiyan Blue)",
+     "file": "/models/vegeta-super-saiyan-blue.glb"
+    },
+    {
+     "id": "vegeta-super-saiyan-blue-whis-armor",
+     "name": "威斯铠甲",
+     "dir": "Vegeta (Super Saiyan Blue, Whis Armor)",
+     "file": "/models/vegeta-super-saiyan-blue-whis-armor.glb"
+    }
+   ]
+  },
+  {
+   "id": "frieza",
+   "name": "弗利萨",
+   "forms": [
+    {
+     "id": "frieza-first-form",
+     "name": "第一形态",
+     "dir": "Frieza (First Form)",
+     "file": "/models/frieza-first-form.glb"
+    },
+    {
+     "id": "frieza-final-form",
+     "name": "最终形态",
+     "dir": "Frieza (Final Form)",
+     "file": "/models/frieza-final-form.glb"
+    },
+    {
+     "id": "golden-frieza",
+     "name": "黄金弗利萨",
+     "dir": "Golden Frieza",
+     "file": "/models/golden-frieza.glb"
+    }
+   ]
+  },
+  {
+   "id": "cell",
+   "name": "沙鲁",
+   "forms": [
+    {
+     "id": "cell-imperfect",
+     "name": "未成熟体",
+     "dir": "Cell (Imperfect)",
+     "file": "/models/cell-imperfect.glb"
+    },
+    {
+     "id": "cell-perfect",
+     "name": "完全体",
+     "dir": "Cell (Perfect)",
+     "file": "/models/cell-perfect.glb"
+    }
+   ]
+  },
+  {
+   "id": "gohan",
+   "name": "孙悟饭",
+   "forms": [
+    {
+     "id": "gohan-kid",
+     "name": "幼年期",
+     "dir": "Gohan (Kid)",
+     "file": "/models/gohan-kid.glb"
+    },
+    {
+     "id": "gohan-teen-super-saiyan-2",
+     "name": "少年·超赛2",
+     "dir": "Gohan (Teen, Super Saiyan 2)",
+     "file": "/models/gohan-teen-super-saiyan-2.glb"
+    },
+    {
+     "id": "gohan-adult",
+     "name": "成年期",
+     "dir": "Gohan (Adult)",
+     "file": "/models/gohan-adult.glb"
+    }
+   ]
+  },
+  {
+   "id": "broly",
+   "name": "布罗利",
+   "forms": [
+    {
+     "id": "broly-base-form",
+     "name": "基础形态",
+     "dir": "Broly (Base Form)",
+     "file": "/models/broly-base-form.glb"
+    },
+    {
+     "id": "broly-dragon-ball-super",
+     "name": "超级形态",
+     "dir": "Broly (Dragon Ball Super)",
+     "file": "/models/broly-dragon-ball-super.glb"
+    },
+    {
+     "id": "broly-legendary-super-saiyan",
+     "name": "传说超赛",
+     "dir": "Broly (Legendary Super Saiyan)",
+     "file": "/models/broly-legendary-super-saiyan.glb"
+    }
+   ]
+  },
+  {
+   "id": "vegito",
+   "name": "贝吉特",
+   "forms": [
+    {
+     "id": "vegito-base-form",
+     "name": "基础形态",
+     "dir": "Vegito (Base Form)",
+     "file": "/models/vegito-base-form.glb"
+    },
+    {
+     "id": "vegito-super-saiyan-blue",
+     "name": "超级赛亚人蓝",
+     "dir": "Vegito (Super Saiyan Blue)",
+     "file": "/models/vegito-super-saiyan-blue.glb"
+    }
+   ]
+  },
+  {
+   "id": "gogeta",
+   "name": "悟吉塔",
+   "forms": [
+    {
+     "id": "gogeta-super-saiyan-4",
+     "name": "超级赛亚人4",
+     "dir": "Gogeta (Super Saiyan 4)",
+     "file": "/models/gogeta-super-saiyan-4.glb"
+    },
+    {
+     "id": "gogeta-super-saiyan-blue",
+     "name": "超级赛亚人蓝",
+     "dir": "Gogeta (Super Saiyan Blue)",
+     "file": "/models/gogeta-super-saiyan-blue.glb"
+    }
+   ]
+  },
+  {
+   "id": "goku-black",
+   "name": "黑悟空",
+   "forms": [
+    {
+     "id": "goku-black",
+     "name": "基础形态",
+     "dir": "Goku Black",
+     "file": "/models/goku-black.glb"
+    },
+    {
+     "id": "goku-black-super-saiyan-rose",
+     "name": "超级赛亚人桃红",
+     "dir": "Goku Black (Super Saiyan Rosé)",
+     "file": "/models/goku-black-super-saiyan-rose.glb"
+    }
+   ]
+  },
+  {
+   "id": "zamasu",
+   "name": "扎马斯",
+   "forms": [
+    {
+     "id": "zamasu",
+     "name": "本体",
+     "dir": "Zamasu",
+     "file": "/models/zamasu.glb"
+    },
+    {
+     "id": "zamasu-fused",
+     "name": "合体扎马斯",
+     "dir": "Zamasu (Fused)",
+     "file": "/models/zamasu-fused.glb"
+    }
+   ]
+  },
+  {
+   "id": "bardock",
+   "name": "巴达克",
+   "forms": [
+    {
+     "id": "bardock-base-form",
+     "name": "基础形态",
+     "dir": "Bardock (Base Form)",
+     "file": "/models/bardock-base-form.glb"
+    },
+    {
+     "id": "bardock-super-saiyan",
+     "name": "超级赛亚人",
+     "dir": "Bardock (Super Saiyan)",
+     "file": "/models/bardock-super-saiyan.glb"
+    }
+   ]
+  },
+  {
+   "id": "trunks",
+   "name": "特兰克斯",
+   "forms": [
+    {
+     "id": "trunks-casual",
+     "name": "便装",
+     "dir": "Trunks (Casual)",
+     "file": "/models/trunks-casual.glb"
+    },
+    {
+     "id": "trunks-super-saiyan",
+     "name": "超级赛亚人",
+     "dir": "Trunks (Super Saiyan)",
+     "file": "/models/trunks-super-saiyan.glb"
+    }
+   ]
+  },
+  {
+   "id": "android17",
+   "name": "人造人17号",
+   "forms": [
+    {
+     "id": "android-17",
+     "name": "基础形态",
+     "dir": "Android 17",
+     "file": "/models/android-17.glb"
+    },
+    {
+     "id": "android-17-ranger",
+     "name": "巡逻装",
+     "dir": "Android 17 (Ranger)",
+     "file": "/models/android-17-ranger.glb"
+    }
+   ]
+  },
+  {
+   "id": "android18",
+   "name": "人造人18号",
+   "forms": [
+    {
+     "id": "android-18",
+     "name": "基础形态",
+     "dir": "Android 18",
+     "file": "/models/android-18.glb"
+    },
+    {
+     "id": "android-18-casual",
+     "name": "便装",
+     "dir": "Android 18 (Casual)",
+     "file": "/models/android-18-casual.glb"
+    }
+   ]
+  },
+  {
+   "id": "android16",
+   "name": "人造人16号",
+   "forms": [
+    {
+     "id": "android-16",
+     "name": "基础形态",
+     "dir": "Android 16",
+     "file": "/models/android-16.glb"
+    }
+   ]
+  },
+  {
+   "id": "android21",
+   "name": "人造人21号",
+   "forms": [
+    {
+     "id": "android-21",
+     "name": "基础形态",
+     "dir": "Android 21",
+     "file": "/models/android-21.glb"
+    },
+    {
+     "id": "android-21-lab-coat",
+     "name": "白大褂",
+     "dir": "Android 21 (Lab Coat)",
+     "file": "/models/android-21-lab-coat.glb"
+    }
+   ]
+  },
+  {
+   "id": "krillin",
+   "name": "克林",
+   "forms": [
+    {
+     "id": "krillin",
+     "name": "武道服",
+     "dir": "Krillin",
+     "file": "/models/krillin.glb"
+    },
+    {
+     "id": "krillin-police-officer",
+     "name": "警察装",
+     "dir": "Krillin (Police Officer)",
+     "file": "/models/krillin-police-officer.glb"
+    }
+   ]
+  },
+  {
+   "id": "tien",
+   "name": "天津饭",
+   "forms": [
+    {
+     "id": "tien",
+     "name": "武道服",
+     "dir": "Tien",
+     "file": "/models/tien.glb"
+    },
+    {
+     "id": "tien-gi",
+     "name": "战斗装",
+     "dir": "Tien (Gi)",
+     "file": "/models/tien-gi.glb"
+    }
+   ]
+  },
+  {
+   "id": "piccolo",
+   "name": "比克",
+   "forms": [
+    {
+     "id": "piccolo",
+     "name": "魔族装",
+     "dir": "Piccolo",
+     "file": "/models/piccolo.glb"
+    },
+    {
+     "id": "piccolo-cape",
+     "name": "披风装",
+     "dir": "Piccolo (Cape)",
+     "file": "/models/piccolo-cape.glb"
+    }
+   ]
+  },
+  {
+   "id": "piccolo-postman",
+   "name": "邮差比克",
+   "forms": [
+    {
+     "id": "piccolo-postboy",
+     "name": "邮差装",
+     "dir": "Piccolo (Postboy)",
+     "file": "/models/piccolo-postboy.glb"
+    }
+   ]
+  },
+  {
+   "id": "yamcha",
+   "name": "雅木茶",
+   "forms": [
+    {
+     "id": "yamcha",
+     "name": "武道服",
+     "dir": "Yamcha",
+     "file": "/models/yamcha.glb"
+    },
+    {
+     "id": "yamcha-baseball",
+     "name": "棒球装",
+     "dir": "Yamcha (Baseball)",
+     "file": "/models/yamcha-baseball.glb"
+    }
+   ]
+  },
+  {
+   "id": "yamcha-casual",
+   "name": "雅木茶（便装）",
+   "forms": [
+    {
+     "id": "yamcha-casual",
+     "name": "便装",
+     "dir": "Yamcha (Casual)",
+     "file": "/models/yamcha-casual.glb"
+    }
+   ]
+  },
+  {
+   "id": "great-saiyaman",
+   "name": "超级保姆",
+   "forms": [
+    {
+     "id": "great-saiyaman",
+     "name": "常态",
+     "dir": "Great Saiyaman",
+     "file": "/models/great-saiyaman.glb"
+    },
+    {
+     "id": "great-saiyaman-w-helmet",
+     "name": "戴头盔",
+     "dir": "Great Saiyaman (w_ Helmet)",
+     "file": "/models/great-saiyaman-w-helmet.glb"
+    }
+   ]
+  },
+  {
+   "id": "gotenks",
+   "name": "悟天克斯",
+   "forms": [
+    {
+     "id": "gotenks-super-saiyan-3",
+     "name": "超级赛亚人3",
+     "dir": "Gotenks (Super Saiyan 3)",
+     "file": "/models/gotenks-super-saiyan-3.glb"
+    }
+   ]
+  },
+  {
+   "id": "videl",
+   "name": "维黛尔",
+   "forms": [
+    {
+     "id": "videl-short-hair",
+     "name": "短发",
+     "dir": "Videl (Short Hair)",
+     "file": "/models/videl-short-hair.glb"
+    },
+    {
+     "id": "videl-long-hair",
+     "name": "长发",
+     "dir": "Videl (Long Hair)",
+     "file": "/models/videl-long-hair.glb"
+    }
+   ]
+  },
+  {
+   "id": "beerus",
+   "name": "比鲁斯",
+   "forms": [
+    {
+     "id": "beerus",
+     "name": "比鲁斯",
+     "dir": "Beerus",
+     "file": "/models/beerus.glb"
+    }
+   ]
+  },
+  {
+   "id": "whis",
+   "name": "维斯",
+   "forms": [
+    {
+     "id": "whis",
+     "name": "维斯",
+     "dir": "Whis",
+     "file": "/models/whis.glb"
+    }
+   ]
+  },
+  {
+   "id": "jiren",
+   "name": "吉连",
+   "forms": [
+    {
+     "id": "jiren",
+     "name": "吉连",
+     "dir": "Jiren",
+     "file": "/models/jiren.glb"
+    }
+   ]
+  },
+  {
+   "id": "hit",
+   "name": "希特",
+   "forms": [
+    {
+     "id": "hit",
+     "name": "希特",
+     "dir": "Hit",
+     "file": "/models/hit.glb"
+    }
+   ]
+  },
+  {
+   "id": "kefla",
+   "name": "凯芙拉",
+   "forms": [
+    {
+     "id": "kefla",
+     "name": "凯芙拉",
+     "dir": "Kefla",
+     "file": "/models/kefla.glb"
+    }
+   ]
+  },
+  {
+   "id": "caulifla",
+   "name": "卡芙萝",
+   "forms": [
+    {
+     "id": "caulifla",
+     "name": "卡芙萝",
+     "dir": "Caulifla",
+     "file": "/models/caulifla.glb"
+    }
+   ]
+  },
+  {
+   "id": "cooler",
+   "name": "库尔德王",
+   "forms": [
+    {
+     "id": "cooler-final-form",
+     "name": "库尔德王",
+     "dir": "Cooler (Final Form)",
+     "file": "/models/cooler-final-form.glb"
+    }
+   ]
+  },
+  {
+   "id": "kid-buu",
+   "name": "小布欧",
+   "forms": [
+    {
+     "id": "kid-buu",
+     "name": "小布欧",
+     "dir": "Kid Buu",
+     "file": "/models/kid-buu.glb"
+    }
+   ]
+  },
+  {
+   "id": "majin-buu",
+   "name": "魔人布欧",
+   "forms": [
+    {
+     "id": "majin-buu",
+     "name": "魔人布欧",
+     "dir": "Majin Buu",
+     "file": "/models/majin-buu.glb"
+    }
+   ]
+  },
+  {
+   "id": "super-baby-2",
+   "name": "超级贝比2",
+   "forms": [
+    {
+     "id": "super-baby-2",
+     "name": "超级贝比2",
+     "dir": "Super Baby 2",
+     "file": "/models/super-baby-2.glb"
+    }
+   ]
+  },
+  {
+   "id": "jamemba",
+   "name": "杰比",
+   "forms": [
+    {
+     "id": "jamemba",
+     "name": "杰比",
+     "dir": "Jamemba",
+     "file": "/models/jamemba.glb"
+    }
+   ]
+  },
+  {
+   "id": "ginyu",
+   "name": "基纽队长",
+   "forms": [
+    {
+     "id": "captain-ginyu",
+     "name": "基纽队长",
+     "dir": "Captain Ginyu",
+     "file": "/models/captain-ginyu.glb"
+    }
+   ]
+  },
+  {
+   "id": "burter",
+   "name": "巴特",
+   "forms": [
+    {
+     "id": "burter",
+     "name": "巴特",
+     "dir": "Burter",
+     "file": "/models/burter.glb"
+    }
+   ]
+  },
+  {
+   "id": "jeice",
+   "name": "吉斯",
+   "forms": [
+    {
+     "id": "jeice",
+     "name": "吉斯",
+     "dir": "Jeice",
+     "file": "/models/jeice.glb"
+    }
+   ]
+  },
+  {
+   "id": "guldo",
+   "name": "古尔多",
+   "forms": [
+    {
+     "id": "guldo",
+     "name": "古尔多",
+     "dir": "Guldo",
+     "file": "/models/guldo.glb"
+    }
+   ]
+  },
+  {
+   "id": "recoome",
+   "name": "利库姆",
+   "forms": [
+    {
+     "id": "recoome",
+     "name": "利库姆",
+     "dir": "Recoome",
+     "file": "/models/recoome.glb"
+    }
+   ]
+  },
+  {
+   "id": "nappa",
+   "name": "那巴",
+   "forms": [
+    {
+     "id": "nappa",
+     "name": "那巴",
+     "dir": "Nappa",
+     "file": "/models/nappa.glb"
+    }
+   ]
+  },
+  {
+   "id": "saibaman",
+   "name": "栽培人",
+   "forms": [
+    {
+     "id": "saibaman",
+     "name": "栽培人",
+     "dir": "Saibaman",
+     "file": "/models/saibaman.glb"
+    }
+   ]
+  },
+  {
+   "id": "bulma",
+   "name": "布尔玛",
+   "forms": [
+    {
+     "id": "bulma",
+     "name": "布尔玛",
+     "dir": "Bulma",
+     "file": "/models/bulma.glb"
+    }
+   ]
+  },
+  {
+   "id": "roshi",
+   "name": "武天老师",
+   "forms": [
+    {
+     "id": "master-roshi",
+     "name": "武天老师",
+     "dir": "Master Roshi",
+     "file": "/models/master-roshi.glb"
+    }
+   ]
+  },
+  {
+   "id": "chiaotzu",
+   "name": "饺子",
+   "forms": [
+    {
+     "id": "chiaotzu",
+     "name": "饺子",
+     "dir": "Chiaotzu",
+     "file": "/models/chiaotzu.glb"
+    }
+   ]
+  },
+  {
+   "id": "hercule",
+   "name": "撒旦先生",
+   "forms": [
+    {
+     "id": "hercule",
+     "name": "撒旦先生",
+     "dir": "Hercule",
+     "file": "/models/hercule.glb"
+    }
+   ]
+  },
+  {
+   "id": "supreme-kai",
+   "name": "界王神",
+   "forms": [
+    {
+     "id": "supreme-kai-of-time",
+     "name": "界王神",
+     "dir": "Supreme Kai of Time",
+     "file": "/models/supreme-kai-of-time.glb"
+    }
+   ]
+  }
+ ],
+ "totalBytes": 44927144
+}

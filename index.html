@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!--
+      纯静态部署（GitHub Pages 等）时把后端地址填进来，多个用英文逗号分隔；
+      由 Worker 托管时留空即可，前端会用同源地址。
+    -->
+    <meta name="apiBase" content="" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 站点标题、图标、背景图由 CF-Server-Monitor 后台外观设置注入，主题不写死。 -->
+    <title>服务器监控</title>
+    <script>
+      (() => {
+        const appearances = new Set(["system", "light", "dark"]);
+        let appearance = "system";
+        try {
+          const raw = localStorage.getItem("appearance") ?? localStorage.getItem("appearance_default");
+          if (raw != null) {
+            let value = raw;
+            try {
+              value = JSON.parse(raw);
+            } catch {}
+            if (appearances.has(value)) appearance = value;
+          }
+        } catch {}
+        const resolved =
+          appearance === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : appearance;
+        document.documentElement.dataset.appearance = resolved;
+        document.documentElement.style.colorScheme = resolved;
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-B2TqykOT.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/react-C2vGvReN.js">
+    <link rel="modulepreload" crossorigin href="./assets/charts-CF2iFpmI.js">
+    <link rel="stylesheet" crossorigin href="./assets/charts-D1GxaB_c.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-D9XVyWqq.css">
+    <meta name="theme-version" content="DragonBallPark v0.1.0" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
