@@ -35,7 +35,7 @@ jobs:
       - name: 安装依赖
         run: |
           rm -f package-lock.json
-          npm install --no-fund --no-audit
+          npm install --no-fund --no-audit --no-package-lock
 
       - name: 类型检查
         run: npm run typecheck
@@ -66,6 +66,10 @@ jobs:
           rm -rf /tmp/theme-dist
           mkdir -p /tmp/theme-dist
           cp -R dist/. /tmp/theme-dist/
+
+          # 装依赖那步可能留下未提交的改动（package-lock.json 之类），
+          # 不丢掉的话 git checkout 会直接拒绝切分支。产物已经在 /tmp/theme-dist 了，丢不掉。
+          git reset --hard HEAD
 
           if git ls-remote --exit-code --heads origin "$TARGET" >/dev/null 2>&1; then
             git fetch origin "$TARGET"
