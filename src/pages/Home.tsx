@@ -6,6 +6,7 @@ import { OverviewCards, SPARK_POINTS } from "@/components/node/OverviewCards";
 import { useAppData } from "@/app/AppData";
 import { useTodayTraffic } from "@/hooks/useStore";
 import { getSettings, subscribeSettings } from "@/services/settings";
+import { resolveThemeAsset } from "@/services/themeAssets";
 import { cn } from "@/lib/cn";
 
 /**
@@ -52,7 +53,16 @@ export function Home() {
     <AppShell>
       <div className="relative flex min-h-0 flex-1">
         {showPark ? (
-          <Suspense fallback={<div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url("${settings.backgroundUrl}")` }} />}>
+          <Suspense
+            fallback={
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url("${resolveThemeAsset(settings.backgroundUrl, settings.assetBase)}")`,
+                }}
+              />
+            }
+          >
             <ParkScene
               nodes={visibleNodes}
               evolutionDays={settings.evolutionDays}

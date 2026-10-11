@@ -7,6 +7,8 @@
  * `public/roster.json` 与 `public/models/`，本模块与场景代码都不用改。
  */
 
+import { resolveThemeAsset } from "@/services/themeAssets";
+
 export interface RosterForm {
   id: string;
   name: string;
@@ -52,18 +54,16 @@ export const MAX_PARK_NODES = 64;
 
 const cache = new Map<string, Promise<Roster>>();
 
-/** 把 roster 里的 `/models/x.glb` 拼上自定义托管前缀。 */
+/** 把 roster 里的 `/models/x.glb` 解析成真实可取的地址。 */
 export function resolveAssetPath(file: string, assetBase: string): string {
-  const path = file.startsWith("/") ? file : `/${file}`;
-  if (!assetBase) return path;
-  return `${assetBase.replace(/\/+$/, "")}${path}`;
+  return resolveThemeAsset(file, assetBase);
 }
 
 export function loadRoster(assetBase = ""): Promise<Roster> {
   const existing = cache.get(assetBase);
   if (existing) return existing;
 
-  const promise = fetch(resolveAssetPath("/roster.json", assetBase), { cache: "force-cache" })
+  const promise = fetch(resolveThemeAsset("/roster.json", assetBase), { cache: "force-cache" })
     .then((response) => {
       if (!response.ok) throw new Error(`角色名录加载失败（HTTP ${response.status}）`);
       return response.json() as Promise<Roster>;

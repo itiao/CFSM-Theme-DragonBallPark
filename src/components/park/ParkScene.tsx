@@ -19,6 +19,7 @@ import {
   type Roster,
   type RosterFamily,
 } from "@/services/park/roster";
+import { resolveThemeAsset } from "@/services/themeAssets";
 
 /**
  * 背景插画的原生尺寸。整个 3D 舞台按这个比例固定，
@@ -258,7 +259,7 @@ export function ParkScene({
     let cancelled = false;
     groundMapRef.current = null;
     if (!backgroundUrl) return;
-    loadGroundMap(backgroundUrl).then((map) => {
+    loadGroundMap(resolveThemeAsset(backgroundUrl, assetBase)).then((map) => {
       if (cancelled) return;
       groundMapRef.current = map;
       syncRef.current();
@@ -266,7 +267,7 @@ export function ParkScene({
     return () => {
       cancelled = true;
     };
-  }, [backgroundUrl]);
+  }, [backgroundUrl, assetBase]);
 
   /* ------------------------------ 载入名录 ------------------------------ */
   useEffect(() => {
@@ -404,7 +405,9 @@ export function ParkScene({
         ref={stageRef}
         className="relative overflow-hidden shadow-2xl"
         style={{
-          backgroundImage: backgroundUrl ? `url("${backgroundUrl}")` : undefined,
+          backgroundImage: backgroundUrl
+            ? `url("${resolveThemeAsset(backgroundUrl, assetBase)}")`
+            : undefined,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
         }}

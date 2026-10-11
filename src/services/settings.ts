@@ -44,7 +44,7 @@ export const DEFAULT_SETTINGS: ThemeSettings = {
   showPrice: false,
   reduceMotion: false,
   glassBlur: 14,
-  backgroundUrl: "/bg-kame-iso.jpg",
+  backgroundUrl: "/assets/bg-kame-iso.jpg",
   assetBase: "",
   showScore: true,
 };
