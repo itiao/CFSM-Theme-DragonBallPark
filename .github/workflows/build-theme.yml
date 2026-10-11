@@ -28,8 +28,14 @@ jobs:
           node-version: 22
           cache: npm
 
+      # 先删掉 lockfile 再装：仓库里的 lockfile 是在 Windows 上生成的，
+      # 只记录了 win32 的 rollup 原生包（rollup 有 27 个平台包，npm 在 Windows 上只写当前平台）。
+      # 在 Linux runner 上照它装会报 Cannot find module '@rollup/rollup-linux-x64-gnu'。
+      # 删掉后 npm 会按当前平台重新解析，各平台都不会踩这个坑。
       - name: 安装依赖
-        run: npm ci
+        run: |
+          rm -f package-lock.json
+          npm install --no-fund --no-audit
 
       - name: 类型检查
         run: npm run typecheck

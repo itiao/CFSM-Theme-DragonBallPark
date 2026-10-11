@@ -13,3 +13,6 @@ shots/
 
 # TS 增量编译缓存
 *.tsbuildinfo
+
+# 临时凭据
+.gh-token
